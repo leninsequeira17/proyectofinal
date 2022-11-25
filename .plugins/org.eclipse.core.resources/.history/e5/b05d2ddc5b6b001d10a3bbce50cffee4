@@ -1,0 +1,64 @@
+package Nestor;
+
+public class TiendaDeZapatos {
+	private String marca,color,sexo,estilo;
+	  private double precio,talla;
+	  public TiendaDeZapatos(){}
+	  public TiendaDeZapatos(String marca, String color, String sexo,String estilo,
+	      double precio, double talla) {
+	    this.marca = marca;
+	    this.color = color;
+	    this.sexo = sexo;
+	    this.estilo = estilo;
+	    this.precio = precio;
+	    this.talla = talla;
+	    
+	  }
+	  public String getMarca() {
+	    return marca;
+	  }
+	  public void setMarca(String marca) {
+	    this.marca = marca;
+	  }
+	  public String getColor() {
+	    return color;
+	  }
+	  public void setColor(String color) {
+	    this.color = color;
+	  }
+	  public String getSexo() {
+	    return sexo;
+	  }
+	  public void setSexo(String sexo) {
+	    this.sexo = sexo;
+	  }
+	  public String getEstilo() {
+	    return estilo;
+	  }
+	  public void setEstilo(String estilo) {
+	    this.estilo = estilo;
+	  }
+	  public double getPrecio() {
+	    return precio;
+	  }
+	  public void setPrecio(double precio) {
+	    this.precio = precio;
+	  }
+	  public double getTalla() {
+	    return talla;
+	  }
+	  public void setTalla(double talla) {
+	    this.talla = talla;
+	  }
+	 
+	  
+	  public String toString() {
+	    return "TiendaDeZapatos [color=" + color + ", estilo=" + estilo + ", marca=" + marca + ", precio=" + precio
+	        + ", sexo=" + sexo + ", talla=" + talla + "]";
+	  }
+	  public void menu(){
+	    System.out.println("Digite la opcion que quiere realizar");
+	    System.out.println("\t1-Registrar inventario \t2-mostrar inventario");
+
+	  }
+}

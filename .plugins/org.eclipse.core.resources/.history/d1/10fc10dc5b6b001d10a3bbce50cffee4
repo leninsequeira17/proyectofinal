@@ -1,0 +1,73 @@
+package Nestor;
+import java.util.Scanner;
+import java.io.*;
+import java.util.ArrayList;
+
+public class RegistroDeInventario {
+
+    public static String m, c, s, e,data;
+    public static double p, t;
+    public static int op, i, cant;
+    public static TiendaDeZapatos tz= new TiendaDeZapatos();
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+         BufferedWriter bw = null;
+         FileWriter fw = null;
+        try {
+            tz.menu();
+            do {
+                while (!s.hasNextInt()) {
+                    s.next();
+                    System.out.println("Digite nuevamente");
+                }
+                op = s.nextInt();
+            } while (op < 1 || op > 3);
+            switch (op) {
+                case 1: {
+                    System.out.println("Cuanto registrara?");
+                    while (!s.hasNextInt()) {
+                        s.next();
+                        System.out.println("Digite nuevamente");
+                    }
+                    cant = s.nextInt();
+                    try {
+                        System.out.println("Digite los datos");
+                  for(i=0;i<cant;i++){
+                 String data = "";
+                 }
+                 File file = new File("Registro.txt");
+
+                 if (!file.exists()) {
+                 file.createNewFile();
+                 }
+
+                 fw = new FileWriter(file.getAbsoluteFile(), true);
+                bw = new BufferedWriter(fw);
+                 bw.write(data);
+                 System.out.println("información agregada!");
+               }catch (IOException e) {
+             e.printStackTrace();
+             } finally {
+             try {
+
+                if (bw != null)
+                    bw.close();
+                if (fw != null)
+                    fw.close();
+             } catch (IOException ex) {
+                ex.printStackTrace();
+             }
+             }
+                    
+                }
+
+            }
+
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+
+    }
+
+}

@@ -1,0 +1,29 @@
+package Pasaremos;
+import java.io.*;
+public class Registrocliente {
+	 BufferedWriter bw = null;
+     FileWriter fw = null;
+    App a= new App();
+ 
+     File file = new File("Cliente nuevo.txt");
+ 
+ 	if (!file.exists()) {
+  	   file.createNewFile();
+		 }
+
+ 	fw = new FileWriter(file.getAbsoluteFile(), true);
+		 bw = new BufferedWriter(fw);
+		 bw.write(ca);
+		 bw.write(i);
+		 bw.write(j);
+		  bw.write(opc);
+		  bw.write(lb);
+		  bw.write(iva);
+		  bw.write(subtotal);
+		  bw.write(ma);
+		  bw.write(nombre);
+		  bw.write(); 
+     System.out.println("Agreado con exito");
+
+}
+}
